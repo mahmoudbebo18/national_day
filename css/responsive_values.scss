@@ -1,0 +1,170 @@
+header {
+    nav {
+        a {
+            img {
+                width: 10vw !important;
+                height: 10vw !important;
+                @media (max-width: 767px) {
+                    width: 15vw !important;
+                    height: 15vw !important;
+                }
+            }
+        }
+    }
+    @media (max-width: 575px) {
+        height: 95px;
+    }
+    &.feeling_header {
+        nav {
+            img {
+                filter: none;
+            }
+        }
+    }
+}
+.send_msg {
+    position: relative;
+    min-height: 100vh;
+    .container {
+        width: 90%;
+        position: relative;
+        transform: translateY(4vh);
+        left: unset;
+        top: unset;
+        z-index: 1000;
+        form {
+            width: 100%;
+            max-width: 65vw;
+
+            .form-group {
+                margin-bottom: 1.5vw;
+                textarea {
+                    padding: 0.5vw 2vw;
+                    height: 18vw;
+                    font-size: 3vw;
+                    border-radius: 2vw;
+                    &::placeholder {
+                        font-size: 3vw;
+                    }
+                }
+                input {
+                    padding: 0.5vw 2vw;
+                    height: 7vw;
+                    font-size: 3vw;
+                    border-radius: 2vw;
+
+                    &::placeholder {
+                        font-size: 3vw;
+                    }
+                }
+                button {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    border-radius: 2vw;
+                    font-size: 5vw;
+                    width: 40vw;
+                    height: 8vw;
+                    overflow: hidden;
+                    line-height: 1.2;
+                    align-items: center;
+                    padding: 0;
+                    span {
+                        display: block;
+                        position: static;
+                        align-self: normal;
+                        margin-inline-end: 7vw;
+                    }
+                    img {
+                        position: static;
+                        height: 100%;
+                        flex-shrink: 0;
+                    }
+                }
+            }
+        }
+    }
+    .message_bg {
+        position: static;
+        max-width: 100%;
+    }
+
+    @media (max-width: 575px) {
+        height: calc(100vh - 95px) !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: unset;
+    }
+}
+
+.qr_wrapper {
+    transform: translateX(0);
+    width: 10vw;
+    height: 10vw;
+    padding: 0.25vw;
+    border: 0.25vw solid #027b6c;
+    border-radius: 1vw;
+    bottom: 1vw;
+    left: 1vw;
+    right: unset;
+    img {
+        max-width: 100%;
+        border-radius: 1vw;
+    }
+}
+
+.display_wall {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .container {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        @media(min-width:1920px){
+            top: 22%;
+        }
+        @media(max-width:767px){
+            top: 20%;
+        }
+    }
+    .feelings_wrapper {
+        .feelings_container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1vw;
+            width: 100%;
+            margin-bottom: 1vw;
+            @media (max-width: 1800px) {
+                grid-template-columns: repeat(4, 1fr); /* Wrap to 4 columns on medium-large screens */
+            }
+
+            @media (max-width: 1200px) {
+                grid-template-columns: repeat(3, 1fr); /* Wrap to 3 columns on medium screens */
+            }
+
+            @media (max-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 500px) {
+                grid-template-columns: 1fr;
+            }
+            .item {
+                
+                padding: 1vw;
+                margin-bottom: 0;
+                border-radius: 1vw;
+                p{
+                    font-size: 2vw;
+                    margin-bottom: .5vw;
+                }
+                h5{
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
